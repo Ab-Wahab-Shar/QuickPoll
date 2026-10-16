@@ -13,10 +13,10 @@ const INITIAL_POLLS = {
     totalEligible: 120,
     audience: 'student',
     options: [
-      { id: 1, name: 'Abdul Wahab', rollNo: '2K23-IT-36', initials: 'AW', votes: 0 },
-      { id: 2, name: 'M Ahsan', rollNo: '2K23-IT-104', initials: 'MA', votes: 0 },
-      { id: 3, name: 'Junaid Ahmed', rollNo: '2K23-IT-85', initials: 'JA', votes: 0 },
-      { id: 4, name: 'Arif Mustafa', rollNo: '2K23-IT-51', initials: 'AM', votes: 0 }
+      { id: 1, name: 'Student One', rollNo: 'STU-TEST-001', initials: 'S1', votes: 0 },
+      { id: 2, name: 'Student Two', rollNo: 'STU-TEST-002', initials: 'S2', votes: 0 },
+      { id: 3, name: 'Student Three', rollNo: 'STU-TEST-003', initials: 'S3', votes: 0 },
+      { id: 4, name: 'Student Four', rollNo: 'STU-TEST-004', initials: 'S4', votes: 0 }
     ]
   },
   2: {
@@ -27,10 +27,10 @@ const INITIAL_POLLS = {
     totalEligible: 120,
     audience: 'student',
     options: [
-      { id: 5, name: 'Kalsoom', rollNo: '2K23-IT-100', initials: 'K', votes: 0 },
-      { id: 6, name: 'Tahira', rollNo: '2K23-IT-25', initials: 'T', votes: 0 },
-      { id: 7, name: 'Haleema', rollNo: '2K23-IT-35', initials: 'H', votes: 0 },
-      { id: 8, name: 'Tayyaba Lodhi', rollNo: '2K23-IT-26', initials: 'TL', votes: 0 }
+      { id: 5, name: 'Student Five', rollNo: 'STU-TEST-005', initials: 'S5', votes: 0 },
+      { id: 6, name: 'Student Six', rollNo: 'STU-TEST-006', initials: 'S6', votes: 0 },
+      { id: 7, name: 'Student Seven', rollNo: 'STU-TEST-007', initials: 'S7', votes: 0 },
+      { id: 8, name: 'Student Eight', rollNo: 'STU-TEST-008', initials: 'S8', votes: 0 }
     ]
   },
   3: {
@@ -41,123 +41,123 @@ const INITIAL_POLLS = {
     totalEligible: 200,
     audience: 'teacher',
     options: [
-      { id: 43, name: 'Mr. Zulfiqar Ali Maher', rollNo: 'Assistant Prof', initials: 'ZM', votes: 0 },
-      { id: 44, name: 'Ms. Suhni Abbasi', rollNo: 'Associate Prof', initials: 'SA', votes: 0 },
-      { id: 45, name: 'Mr. Suhrab Thaheem', rollNo: 'Assistant Prof', initials: 'ST', votes: 0 },
-      { id: 46, name: 'Mr. Mukhtiar Memon', rollNo: 'Professor', initials: 'MM', votes: 0 }
+      { id: 43, name: 'Teacher One', rollNo: 'Assistant Prof', initials: 'T1', votes: 0 },
+      { id: 44, name: 'Teacher Two', rollNo: 'Associate Prof', initials: 'T2', votes: 0 },
+      { id: 45, name: 'Teacher Three', rollNo: 'Assistant Prof', initials: 'T3', votes: 0 },
+      { id: 46, name: 'Teacher Four', rollNo: 'Professor', initials: 'T4', votes: 0 }
     ]
   }
 };
 
 const DEFAULT_PROFILES = {
-  '2K23-IT-36': {
-    name: 'Abdul Wahab',
-    rollNo: '2K23-IT-36',
+  'STU-TEST-001': {
+    name: 'Student One',
+    rollNo: 'STU-TEST-001',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'abdul.wahab2k23@university.edu'
+    email: 'student1@university.edu'
   },
-  '2K23-IT-104': {
-    name: 'M Ahsan',
-    rollNo: '2K23-IT-104',
+  'STU-TEST-002': {
+    name: 'Student Two',
+    rollNo: 'STU-TEST-002',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'm.ahsan2k23@university.edu'
+    email: 'student2@university.edu'
   },
-  '2K23-IT-85': {
-    name: 'Junaid Ahmed',
-    rollNo: '2K23-IT-85',
+  'STU-TEST-003': {
+    name: 'Student Three',
+    rollNo: 'STU-TEST-003',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'junaid2k23@university.edu'
+    email: 'student3@university.edu'
   },
-  '2K23-IT-51': {
-    name: 'Arif Mustafa',
-    rollNo: '2K23-IT-51',
+  'STU-TEST-004': {
+    name: 'Student Four',
+    rollNo: 'STU-TEST-004',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'arif2k23@university.edu'
+    email: 'student4@university.edu'
   },
-  '2K23-IT-100': {
-    name: 'Kalsoom',
-    rollNo: '2K23-IT-100',
+  'STU-TEST-005': {
+    name: 'Student Five',
+    rollNo: 'STU-TEST-005',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'kalsoom2k23@university.edu'
+    email: 'student5@university.edu'
   },
-  '2K23-IT-25': {
-    name: 'Tahira',
-    rollNo: '2K23-IT-25',
+  'STU-TEST-006': {
+    name: 'Student Six',
+    rollNo: 'STU-TEST-006',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'tahira2k23@university.edu'
+    email: 'student6@university.edu'
   },
-  '2K23-IT-35': {
-    name: 'Haleema',
-    rollNo: '2K23-IT-35',
+  'STU-TEST-007': {
+    name: 'Student Seven',
+    rollNo: 'STU-TEST-007',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'haleema2k23@university.edu'
+    email: 'student7@university.edu'
   },
-  '2K23-IT-26': {
-    name: 'Tayyaba Lodhi',
-    rollNo: '2K23-IT-26',
+  'STU-TEST-008': {
+    name: 'Student Eight',
+    rollNo: 'STU-TEST-008',
     role: 'student',
     department: 'Information Technology',
     semester: 'Semester 6',
-    email: 'tayyaba2k23@university.edu'
+    email: 'student8@university.edu'
   },
   'T-01': {
-    name: 'Mr. Zulfiqar Ali Maher',
+    name: 'Teacher One',
     rollNo: 'T-01',
     facultyId: 'T-01',
     role: 'teacher',
     department: 'Information Technology',
     designation: 'Assistant Prof',
-    email: 'z.maher@university.edu'
+    email: 'teacher1@university.edu'
   },
   'T-02': {
-    name: 'Ms. Suhni Abbasi',
+    name: 'Teacher Two',
     rollNo: 'T-02',
     facultyId: 'T-02',
     role: 'teacher',
     department: 'Information Technology',
     designation: 'Associate Prof',
-    email: 'suhni.abbasi@university.edu'
+    email: 'teacher2@university.edu'
   },
   'T-03': {
-    name: 'Mr. Suhrab Thaheem',
+    name: 'Teacher Three',
     rollNo: 'T-03',
     facultyId: 'T-03',
     role: 'teacher',
     department: 'Information Technology',
     designation: 'Assistant Prof',
-    email: 'suhrab.thaheem@university.edu'
+    email: 'teacher3@university.edu'
   },
   'T-04': {
-    name: 'Mr. Mukhtiar Memon',
+    name: 'Teacher Four',
     rollNo: 'T-04',
     facultyId: 'T-04',
     role: 'teacher',
     department: 'Information Technology',
     designation: 'Professor',
-    email: 'mukhtiar.memon@university.edu'
+    email: 'teacher4@university.edu'
   },
   'teacher': {
-    name: 'Mr. Zulfiqar Ali Maher',
+    name: 'Teacher One',
     rollNo: 'T-01',
     facultyId: 'T-01',
     role: 'teacher',
     department: 'Information Technology',
     designation: 'Assistant Prof',
-    email: 'z.maher@university.edu'
+    email: 'teacher1@university.edu'
   },
   'ADMIN': {
     name: 'Faculty Administrator',
@@ -247,7 +247,7 @@ export const PollProvider = ({ children }) => {
       setProfiles(prev => ({
         ...prev,
         [cleanId]: {
-          name: cleanId === '2K23-IT-36' ? 'Abdul Wahab' : cleanId,
+          name: cleanId === 'STU-TEST-001' ? 'Student One' : cleanId,
           rollNo: cleanId,
           facultyId: effectiveRole === 'teacher' ? cleanId : undefined,
           role: effectiveRole,
@@ -405,7 +405,7 @@ export const PollProvider = ({ children }) => {
     }
     const role = currentUser.role || (id.toUpperCase().startsWith('T-') || id.toLowerCase() === 'teacher' || id.toUpperCase() === 'ADMIN' ? 'teacher' : 'student');
     return {
-      name: role === 'teacher' ? `Faculty (${id})` : (id === '2K23-IT-36' ? 'Abdul Wahab' : `Student (${id})`),
+      name: role === 'teacher' ? `Faculty (${id})` : (id === 'STU-TEST-001' ? 'Student One' : `Student (${id})`),
       rollNo: id,
       facultyId: role === 'teacher' ? id : undefined,
       department: 'Information Technology',

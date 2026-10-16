@@ -96,7 +96,7 @@ const Login = () => {
                 <input 
                   type="text" 
                   id="studentId" 
-                  placeholder={roleType === 'teacher' ? "e.g. T-01 or teacher" : "e.g. 2K23-IT-36"}
+                  placeholder={roleType === 'teacher' ? "e.g. T-01 or teacher" : "e.g. STU-TEST-001"}
                   value={studentId}
                   onChange={(e) => setStudentId(e.target.value)}
                   autoComplete="username"
