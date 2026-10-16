@@ -1,0 +1,533 @@
+/* src/pages/Results.css - Modern Election Results */
+
+.results-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding-bottom: 110px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+  top: -80px;
+  right: -100px;
+}
+
+.orb-2 {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  bottom: 15%;
+  left: -80px;
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.back-btn-premium {
+  background: #ffffff;
+  color: #334155;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.back-btn-premium:hover {
+  background: #f8fafc;
+  color: var(--primary-color);
+  border-color: #cbd5e1;
+  transform: translateX(-2px);
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+}
+
+.spacer {
+  width: 38px;
+}
+
+.results-main {
+  padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Category Filter Tabs for Teacher */
+.results-filter-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(241, 245, 249, 0.9);
+  padding: 4px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.results-tab-btn {
+  flex: 1;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.results-tab-btn.active {
+  background: #ffffff;
+  color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+/* Result Card */
+.result-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.result-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.result-category-chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.result-poll-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.status-badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.status-badge-modern.live,
+.status-badge-modern.active {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-badge-modern.paused {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.status-badge-modern.ended,
+.status-badge-modern.completed {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.status-dot-mini {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Winner Spotlight Card */
+.winner-spotlight-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 50%, #fef3c7 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.12);
+}
+
+.spotlight-trophy-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3);
+}
+
+.spotlight-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.spotlight-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #b45309;
+}
+
+.spotlight-winner-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+  margin: 0.15rem 0;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotlight-meta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #92400e;
+}
+
+/* Stats Grid */
+.stats-grid-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-pill-modern {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.stat-icon-muted {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.turnout-pill {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(191, 219, 254, 0.9);
+}
+
+.turnout-icon {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.pill-text-wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pill-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.pill-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.turnout-pill .pill-value {
+  color: #1d4ed8;
+}
+
+/* Turnout Meter */
+.turnout-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+.turnout-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.turnout-bar-bg {
+  width: 100%;
+  height: 7px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.turnout-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 9999px;
+  transition: width 0.8s ease-out;
+}
+
+/* Breakdown */
+.candidates-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.breakdown-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: -0.2px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.4rem;
+}
+
+.result-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.75rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s;
+}
+
+.result-row.winner {
+  background: #fffdf5;
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
+}
+
+.result-row-main {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.rank-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #64748b;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.result-row.winner .rank-badge {
+  background: #f59e0b;
+  color: white;
+}
+
+.result-candidate-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name-line {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.result-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.result-row.winner .result-name {
+  color: #92400e;
+}
+
+.result-rollno {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #ffffff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #e2e8f0;
+}
+
+.winner-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.result-stats-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.result-percent-bold {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.result-row.winner .result-percent-bold {
+  color: #b45309;
+}
+
+.result-votes-count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  border-radius: 9999px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-row.winner .progress-bar-fill {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+/* Responsiveness */
+@media (max-width: 540px) {
+  .results-main {
+    padding: 1rem 0.875rem 2.5rem 0.875rem;
+  }
+  .result-card {
+    padding: 1.25rem 1rem;
+    border-radius: 18px;
+  }
+  .stats-grid-results {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  .stat-pill-modern {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .stat-icon-muted {
+    display: none;
+  }
+  .spotlight-winner-name {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,512 @@
+/* src/pages/TeacherDashboard.css - Executive Faculty Portal */
+
+.admin-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  padding-bottom: 110px;
+}
+
+/* Header */
+.admin-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-logo-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.35);
+}
+
+.admin-logo h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+
+.admin-sub {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.admin-nav-btn.results-btn {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.admin-nav-btn.results-btn:hover {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.admin-nav-btn.profile-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.admin-nav-btn.profile-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-nav-btn.logout-top-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.admin-nav-btn.logout-top-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Main Area */
+.admin-main {
+  padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 0.75rem;
+}
+
+.admin-cat-chip {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.admin-poll-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.admin-status-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f8fafc;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.live {
+  background-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+.status-dot.paused {
+  background-color: #f59e0b;
+}
+
+.status-dot.ended {
+  background-color: #ef4444;
+}
+
+.admin-status-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Stats */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.admin-stat-box {
+  background: #f8fafc;
+  padding: 0.875rem;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-icon {
+  margin-bottom: 0.25rem;
+}
+
+.stat-icon.blue { color: #3b82f6; }
+.stat-icon.green { color: #10b981; }
+.stat-icon.purple { color: #8b5cf6; }
+
+.stat-val {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* Turnout progress bar */
+.faculty-turnout-wrap {
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+}
+
+.faculty-turnout-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+.faculty-turnout-header strong {
+  color: #ef4444;
+}
+
+.faculty-turnout-bg {
+  width: 100%;
+  height: 7px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.faculty-turnout-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 9999px;
+  transition: width 0.6s ease-out;
+}
+
+/* Controls card */
+.admin-controls-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.65rem;
+}
+
+.admin-controls {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 0.875rem;
+}
+
+.control-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  color: white;
+}
+
+.control-btn.start { background: #10b981; }
+.control-btn.start:hover:not(.disabled) { background: #059669; }
+
+.control-btn.pause { background: #f59e0b; }
+.control-btn.pause:hover:not(.disabled) { background: #d97706; }
+
+.control-btn.end { background: #ef4444; }
+.control-btn.end:hover:not(.disabled) { background: #dc2626; }
+
+.control-btn.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.admin-vote-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cast-faculty-vote-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: all 0.2s;
+}
+
+.cast-faculty-vote-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.admin-voted-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #059669;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  width: 100%;
+  justify-content: center;
+}
+
+/* Quick results table */
+.quick-results {
+  background: #f8fafc;
+  padding: 1.15rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.quick-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.quick-results-header h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #334155;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+.quick-results-sub {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.mini-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.mini-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+}
+
+.mini-result-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.mini-rank {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #64748b;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mini-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-designation {
+  font-size: 0.72rem;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.mini-result-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.mini-percent {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.mini-votes {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .admin-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .admin-main {
+    padding: 1rem 0.875rem 2.5rem 0.875rem;
+  }
+  
+  .admin-card {
+    padding: 1.15rem 1rem;
+  }
+  
+  .admin-nav-btn span {
+    display: none;
+  }
+  
+  .admin-nav-btn {
+    padding: 0.45rem;
+  }
+  
+  .admin-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .admin-stat-box {
+    padding: 0.65rem 0.35rem;
+  }
+  
+  .stat-val {
+    font-size: 1.15rem;
+  }
+  
+  .control-btn span {
+    font-size: 0.75rem;
+  }
+}

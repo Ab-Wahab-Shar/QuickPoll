@@ -1,0 +1,12 @@
+{
+  "appId": "com.quickpoll.app",
+  "appName": "QuickPoll",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true,
+    "androidScheme": "http"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
